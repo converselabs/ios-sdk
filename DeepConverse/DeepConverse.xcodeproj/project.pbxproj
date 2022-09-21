@@ -10,6 +10,7 @@
 		DEF5999028DAB6A8004EE670 /* DeepConverse.docc in Sources */ = {isa = PBXBuildFile; fileRef = DEF5998F28DAB6A8004EE670 /* DeepConverse.docc */; };
 		DEF5999128DAB6A8004EE670 /* DeepConverse.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF5998E28DAB6A8004EE670 /* DeepConverse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEF5999828DAB6D2004EE670 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF5999728DAB6D2004EE670 /* Service.swift */; };
+		DEF599D628DACC76004EE670 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF599D528DACC76004EE670 /* Auth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +18,7 @@
 		DEF5998E28DAB6A8004EE670 /* DeepConverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeepConverse.h; sourceTree = "<group>"; };
 		DEF5998F28DAB6A8004EE670 /* DeepConverse.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DeepConverse.docc; sourceTree = "<group>"; };
 		DEF5999728DAB6D2004EE670 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		DEF599D528DACC76004EE670 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 				DEF5998E28DAB6A8004EE670 /* DeepConverse.h */,
 				DEF5998F28DAB6A8004EE670 /* DeepConverse.docc */,
 				DEF5999728DAB6D2004EE670 /* Service.swift */,
+				DEF599D528DACC76004EE670 /* Auth.swift */,
 			);
 			path = DeepConverse;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			files = (
 				DEF5999028DAB6A8004EE670 /* DeepConverse.docc in Sources */,
 				DEF5999828DAB6D2004EE670 /* Service.swift in Sources */,
+				DEF599D628DACC76004EE670 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

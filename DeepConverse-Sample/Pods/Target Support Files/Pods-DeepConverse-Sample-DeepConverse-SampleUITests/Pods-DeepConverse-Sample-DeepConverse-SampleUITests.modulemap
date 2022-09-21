@@ -1,0 +1,6 @@
+framework module Pods_DeepConverse_Sample_DeepConverse_SampleUITests {
+  umbrella header "Pods-DeepConverse-Sample-DeepConverse-SampleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

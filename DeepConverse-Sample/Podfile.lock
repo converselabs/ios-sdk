@@ -1,0 +1,16 @@
+PODS:
+  - DeepConverse (1.0.0)
+
+DEPENDENCIES:
+  - DeepConverse (from `../DeepConverse`)
+
+EXTERNAL SOURCES:
+  DeepConverse:
+    :path: "../DeepConverse"
+
+SPEC CHECKSUMS:
+  DeepConverse: 2c5422a1ffb129df3ec1e8c07f62575c6198b8a3
+
+PODFILE CHECKSUM: c3eda6cf6e784f6e54172ec27dcff66e8a11cbec
+
+COCOAPODS: 1.11.3

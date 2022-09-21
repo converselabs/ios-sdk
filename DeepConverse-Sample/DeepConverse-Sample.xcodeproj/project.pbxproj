@@ -1,0 +1,756 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3793771B80B55C59FC7A54FB /* Pods_DeepConverse_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32E050C6A9E7A729DDFA0D7 /* Pods_DeepConverse_Sample.framework */; };
+		7AB6F9FE0E476B9AFEAF3D5C /* Pods_DeepConverse_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE9B360245CE0CF4F8D035B /* Pods_DeepConverse_SampleTests.framework */; };
+		C5F67A01DCE318099392AAAE /* Pods_DeepConverse_Sample_DeepConverse_SampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE07D346B9EA616BB8E4F0F1 /* Pods_DeepConverse_Sample_DeepConverse_SampleUITests.framework */; };
+		DEF599A628DAC340004EE670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF599A528DAC340004EE670 /* AppDelegate.swift */; };
+		DEF599A828DAC340004EE670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF599A728DAC340004EE670 /* SceneDelegate.swift */; };
+		DEF599AA28DAC340004EE670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF599A928DAC340004EE670 /* ViewController.swift */; };
+		DEF599AD28DAC340004EE670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF599AB28DAC340004EE670 /* Main.storyboard */; };
+		DEF599AF28DAC341004EE670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEF599AE28DAC341004EE670 /* Assets.xcassets */; };
+		DEF599B228DAC341004EE670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF599B028DAC341004EE670 /* LaunchScreen.storyboard */; };
+		DEF599BD28DAC341004EE670 /* DeepConverse_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF599BC28DAC341004EE670 /* DeepConverse_SampleTests.swift */; };
+		DEF599C728DAC341004EE670 /* DeepConverse_SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF599C628DAC341004EE670 /* DeepConverse_SampleUITests.swift */; };
+		DEF599C928DAC341004EE670 /* DeepConverse_SampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF599C828DAC341004EE670 /* DeepConverse_SampleUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DEF599B928DAC341004EE670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEF5999A28DAC340004EE670 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEF599A128DAC340004EE670;
+			remoteInfo = "DeepConverse-Sample";
+		};
+		DEF599C328DAC341004EE670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEF5999A28DAC340004EE670 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEF599A128DAC340004EE670;
+			remoteInfo = "DeepConverse-Sample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		36B89197AF3B663FA1FF7963 /* Pods-DeepConverse-Sample-DeepConverse-SampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepConverse-Sample-DeepConverse-SampleUITests.release.xcconfig"; path = "Target Support Files/Pods-DeepConverse-Sample-DeepConverse-SampleUITests/Pods-DeepConverse-Sample-DeepConverse-SampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3811083634EE0DDB2DF0709E /* Pods-DeepConverse-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepConverse-Sample.release.xcconfig"; path = "Target Support Files/Pods-DeepConverse-Sample/Pods-DeepConverse-Sample.release.xcconfig"; sourceTree = "<group>"; };
+		6EE9B360245CE0CF4F8D035B /* Pods_DeepConverse_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepConverse_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79FD9D76B1068B031EE089C9 /* Pods-DeepConverse-Sample-DeepConverse-SampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepConverse-Sample-DeepConverse-SampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-DeepConverse-Sample-DeepConverse-SampleUITests/Pods-DeepConverse-Sample-DeepConverse-SampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A654B396D3D2D6FA5BC9217 /* Pods-DeepConverse-SampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepConverse-SampleTests.release.xcconfig"; path = "Target Support Files/Pods-DeepConverse-SampleTests/Pods-DeepConverse-SampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		B32E050C6A9E7A729DDFA0D7 /* Pods_DeepConverse_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepConverse_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBD11B00F5945E2CD8DFFAA4 /* Pods-DeepConverse-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepConverse-Sample.debug.xcconfig"; path = "Target Support Files/Pods-DeepConverse-Sample/Pods-DeepConverse-Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		DAAF507E40C1C088D168167F /* Pods-DeepConverse-SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepConverse-SampleTests.debug.xcconfig"; path = "Target Support Files/Pods-DeepConverse-SampleTests/Pods-DeepConverse-SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEF599A228DAC340004EE670 /* DeepConverse-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DeepConverse-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEF599A528DAC340004EE670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DEF599A728DAC340004EE670 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DEF599A928DAC340004EE670 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEF599AC28DAC340004EE670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DEF599AE28DAC341004EE670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEF599B128DAC341004EE670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DEF599B328DAC341004EE670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEF599B828DAC341004EE670 /* DeepConverse-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DeepConverse-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEF599BC28DAC341004EE670 /* DeepConverse_SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepConverse_SampleTests.swift; sourceTree = "<group>"; };
+		DEF599C228DAC341004EE670 /* DeepConverse-SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DeepConverse-SampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEF599C628DAC341004EE670 /* DeepConverse_SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepConverse_SampleUITests.swift; sourceTree = "<group>"; };
+		DEF599C828DAC341004EE670 /* DeepConverse_SampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepConverse_SampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE07D346B9EA616BB8E4F0F1 /* Pods_DeepConverse_Sample_DeepConverse_SampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepConverse_Sample_DeepConverse_SampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEF5999F28DAC340004EE670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3793771B80B55C59FC7A54FB /* Pods_DeepConverse_Sample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEF599B528DAC341004EE670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AB6F9FE0E476B9AFEAF3D5C /* Pods_DeepConverse_SampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEF599BF28DAC341004EE670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5F67A01DCE318099392AAAE /* Pods_DeepConverse_Sample_DeepConverse_SampleUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53C1D916E4837B4F8554D7A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBD11B00F5945E2CD8DFFAA4 /* Pods-DeepConverse-Sample.debug.xcconfig */,
+				3811083634EE0DDB2DF0709E /* Pods-DeepConverse-Sample.release.xcconfig */,
+				79FD9D76B1068B031EE089C9 /* Pods-DeepConverse-Sample-DeepConverse-SampleUITests.debug.xcconfig */,
+				36B89197AF3B663FA1FF7963 /* Pods-DeepConverse-Sample-DeepConverse-SampleUITests.release.xcconfig */,
+				DAAF507E40C1C088D168167F /* Pods-DeepConverse-SampleTests.debug.xcconfig */,
+				7A654B396D3D2D6FA5BC9217 /* Pods-DeepConverse-SampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		927537453E55B538DE8F2713 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B32E050C6A9E7A729DDFA0D7 /* Pods_DeepConverse_Sample.framework */,
+				EE07D346B9EA616BB8E4F0F1 /* Pods_DeepConverse_Sample_DeepConverse_SampleUITests.framework */,
+				6EE9B360245CE0CF4F8D035B /* Pods_DeepConverse_SampleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEF5999928DAC340004EE670 = {
+			isa = PBXGroup;
+			children = (
+				DEF599A428DAC340004EE670 /* DeepConverse-Sample */,
+				DEF599BB28DAC341004EE670 /* DeepConverse-SampleTests */,
+				DEF599C528DAC341004EE670 /* DeepConverse-SampleUITests */,
+				DEF599A328DAC340004EE670 /* Products */,
+				53C1D916E4837B4F8554D7A2 /* Pods */,
+				927537453E55B538DE8F2713 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DEF599A328DAC340004EE670 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEF599A228DAC340004EE670 /* DeepConverse-Sample.app */,
+				DEF599B828DAC341004EE670 /* DeepConverse-SampleTests.xctest */,
+				DEF599C228DAC341004EE670 /* DeepConverse-SampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEF599A428DAC340004EE670 /* DeepConverse-Sample */ = {
+			isa = PBXGroup;
+			children = (
+				DEF599A528DAC340004EE670 /* AppDelegate.swift */,
+				DEF599A728DAC340004EE670 /* SceneDelegate.swift */,
+				DEF599A928DAC340004EE670 /* ViewController.swift */,
+				DEF599AB28DAC340004EE670 /* Main.storyboard */,
+				DEF599AE28DAC341004EE670 /* Assets.xcassets */,
+				DEF599B028DAC341004EE670 /* LaunchScreen.storyboard */,
+				DEF599B328DAC341004EE670 /* Info.plist */,
+			);
+			path = "DeepConverse-Sample";
+			sourceTree = "<group>";
+		};
+		DEF599BB28DAC341004EE670 /* DeepConverse-SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DEF599BC28DAC341004EE670 /* DeepConverse_SampleTests.swift */,
+			);
+			path = "DeepConverse-SampleTests";
+			sourceTree = "<group>";
+		};
+		DEF599C528DAC341004EE670 /* DeepConverse-SampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DEF599C628DAC341004EE670 /* DeepConverse_SampleUITests.swift */,
+				DEF599C828DAC341004EE670 /* DeepConverse_SampleUITestsLaunchTests.swift */,
+			);
+			path = "DeepConverse-SampleUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DEF599A128DAC340004EE670 /* DeepConverse-Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEF599CC28DAC341004EE670 /* Build configuration list for PBXNativeTarget "DeepConverse-Sample" */;
+			buildPhases = (
+				EA31E43AFD0B187FBDB47EE1 /* [CP] Check Pods Manifest.lock */,
+				DEF5999E28DAC340004EE670 /* Sources */,
+				DEF5999F28DAC340004EE670 /* Frameworks */,
+				DEF599A028DAC340004EE670 /* Resources */,
+				71E4EB27D9E187541D0E12A7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DeepConverse-Sample";
+			productName = "DeepConverse-Sample";
+			productReference = DEF599A228DAC340004EE670 /* DeepConverse-Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DEF599B728DAC341004EE670 /* DeepConverse-SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEF599CF28DAC341004EE670 /* Build configuration list for PBXNativeTarget "DeepConverse-SampleTests" */;
+			buildPhases = (
+				C077FBDB93358D31CA99EB5A /* [CP] Check Pods Manifest.lock */,
+				DEF599B428DAC341004EE670 /* Sources */,
+				DEF599B528DAC341004EE670 /* Frameworks */,
+				DEF599B628DAC341004EE670 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEF599BA28DAC341004EE670 /* PBXTargetDependency */,
+			);
+			name = "DeepConverse-SampleTests";
+			productName = "DeepConverse-SampleTests";
+			productReference = DEF599B828DAC341004EE670 /* DeepConverse-SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DEF599C128DAC341004EE670 /* DeepConverse-SampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEF599D228DAC341004EE670 /* Build configuration list for PBXNativeTarget "DeepConverse-SampleUITests" */;
+			buildPhases = (
+				6B904B66816D78C7C233E123 /* [CP] Check Pods Manifest.lock */,
+				DEF599BE28DAC341004EE670 /* Sources */,
+				DEF599BF28DAC341004EE670 /* Frameworks */,
+				DEF599C028DAC341004EE670 /* Resources */,
+				8B01D9A895A015EE3A9A3A0C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEF599C428DAC341004EE670 /* PBXTargetDependency */,
+			);
+			name = "DeepConverse-SampleUITests";
+			productName = "DeepConverse-SampleUITests";
+			productReference = DEF599C228DAC341004EE670 /* DeepConverse-SampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEF5999A28DAC340004EE670 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					DEF599A128DAC340004EE670 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					DEF599B728DAC341004EE670 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = DEF599A128DAC340004EE670;
+					};
+					DEF599C128DAC341004EE670 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = DEF599A128DAC340004EE670;
+					};
+				};
+			};
+			buildConfigurationList = DEF5999D28DAC340004EE670 /* Build configuration list for PBXProject "DeepConverse-Sample" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DEF5999928DAC340004EE670;
+			productRefGroup = DEF599A328DAC340004EE670 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEF599A128DAC340004EE670 /* DeepConverse-Sample */,
+				DEF599B728DAC341004EE670 /* DeepConverse-SampleTests */,
+				DEF599C128DAC341004EE670 /* DeepConverse-SampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEF599A028DAC340004EE670 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEF599B228DAC341004EE670 /* LaunchScreen.storyboard in Resources */,
+				DEF599AF28DAC341004EE670 /* Assets.xcassets in Resources */,
+				DEF599AD28DAC340004EE670 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEF599B628DAC341004EE670 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEF599C028DAC341004EE670 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B904B66816D78C7C233E123 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeepConverse-Sample-DeepConverse-SampleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71E4EB27D9E187541D0E12A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeepConverse-Sample/Pods-DeepConverse-Sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeepConverse-Sample/Pods-DeepConverse-Sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeepConverse-Sample/Pods-DeepConverse-Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B01D9A895A015EE3A9A3A0C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeepConverse-Sample-DeepConverse-SampleUITests/Pods-DeepConverse-Sample-DeepConverse-SampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeepConverse-Sample-DeepConverse-SampleUITests/Pods-DeepConverse-Sample-DeepConverse-SampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeepConverse-Sample-DeepConverse-SampleUITests/Pods-DeepConverse-Sample-DeepConverse-SampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C077FBDB93358D31CA99EB5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeepConverse-SampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA31E43AFD0B187FBDB47EE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeepConverse-Sample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEF5999E28DAC340004EE670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEF599AA28DAC340004EE670 /* ViewController.swift in Sources */,
+				DEF599A628DAC340004EE670 /* AppDelegate.swift in Sources */,
+				DEF599A828DAC340004EE670 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEF599B428DAC341004EE670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEF599BD28DAC341004EE670 /* DeepConverse_SampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEF599BE28DAC341004EE670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEF599C728DAC341004EE670 /* DeepConverse_SampleUITests.swift in Sources */,
+				DEF599C928DAC341004EE670 /* DeepConverse_SampleUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEF599BA28DAC341004EE670 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEF599A128DAC340004EE670 /* DeepConverse-Sample */;
+			targetProxy = DEF599B928DAC341004EE670 /* PBXContainerItemProxy */;
+		};
+		DEF599C428DAC341004EE670 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEF599A128DAC340004EE670 /* DeepConverse-Sample */;
+			targetProxy = DEF599C328DAC341004EE670 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DEF599AB28DAC340004EE670 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEF599AC28DAC340004EE670 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DEF599B028DAC341004EE670 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEF599B128DAC341004EE670 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DEF599CA28DAC341004EE670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DEF599CB28DAC341004EE670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DEF599CD28DAC341004EE670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBD11B00F5945E2CD8DFFAA4 /* Pods-DeepConverse-Sample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DeepConverse-Sample/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deepconverse.www.DeepConverse-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DEF599CE28DAC341004EE670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3811083634EE0DDB2DF0709E /* Pods-DeepConverse-Sample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DeepConverse-Sample/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deepconverse.www.DeepConverse-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DEF599D028DAC341004EE670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAAF507E40C1C088D168167F /* Pods-DeepConverse-SampleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deepconverse.www.DeepConverse-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeepConverse-Sample.app/DeepConverse-Sample";
+			};
+			name = Debug;
+		};
+		DEF599D128DAC341004EE670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A654B396D3D2D6FA5BC9217 /* Pods-DeepConverse-SampleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deepconverse.www.DeepConverse-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeepConverse-Sample.app/DeepConverse-Sample";
+			};
+			name = Release;
+		};
+		DEF599D328DAC341004EE670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79FD9D76B1068B031EE089C9 /* Pods-DeepConverse-Sample-DeepConverse-SampleUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deepconverse.www.DeepConverse-SampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DeepConverse-Sample";
+			};
+			name = Debug;
+		};
+		DEF599D428DAC341004EE670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36B89197AF3B663FA1FF7963 /* Pods-DeepConverse-Sample-DeepConverse-SampleUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deepconverse.www.DeepConverse-SampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DeepConverse-Sample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEF5999D28DAC340004EE670 /* Build configuration list for PBXProject "DeepConverse-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEF599CA28DAC341004EE670 /* Debug */,
+				DEF599CB28DAC341004EE670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEF599CC28DAC341004EE670 /* Build configuration list for PBXNativeTarget "DeepConverse-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEF599CD28DAC341004EE670 /* Debug */,
+				DEF599CE28DAC341004EE670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEF599CF28DAC341004EE670 /* Build configuration list for PBXNativeTarget "DeepConverse-SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEF599D028DAC341004EE670 /* Debug */,
+				DEF599D128DAC341004EE670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEF599D228DAC341004EE670 /* Build configuration list for PBXNativeTarget "DeepConverse-SampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEF599D328DAC341004EE670 /* Debug */,
+				DEF599D428DAC341004EE670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DEF5999A28DAC340004EE670 /* Project object */;
+}

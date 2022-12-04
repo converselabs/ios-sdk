@@ -11,6 +11,7 @@ import WebKit
 public enum DeepConverseWebHostError: Error {
     case WebViewFailedToLoad
     case WebViewTimeout
+    case SDKInitilizationError
 }
 
 public protocol DeepConverseDelegate {
@@ -50,14 +51,12 @@ public class DeepConverseSDKSession {
 public class DeepConverseSDK {
     
     private var delegate: DeepConverseDelegate
-    
-    private var webView: WKWebView?
     private var botUrl: URL?
     private var timeout: Double
     
     public init(delegate: DeepConverseDelegate, session: DeepConverseSDKSession) {
         self.delegate = delegate
-        timeout = session.webViewTimeout
+        self.timeout = session.webViewTimeout
         createSession(session: session)
     }
     
@@ -68,7 +67,8 @@ public class DeepConverseSDK {
         guard let subDomain = session.subDomain,
               let botName = session.botName,
               let context = session.metadata else {
-            fatalError("Incorrect settings. Subdomain, Botname and Metadata should be initilized")
+            delegate.didWebViewFail(withError: DeepConverseWebHostError.SDKInitilizationError)
+            return
         }
         
         guard let url = createUrl (
@@ -76,7 +76,7 @@ public class DeepConverseSDK {
             botName: botName,
             context: context
         ) else {
-            fatalError("Unable to create the URL. Please check subdomain, botname and metadata in SDK settings")
+            return
         }
         
         botUrl = url

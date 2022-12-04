@@ -19,22 +19,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkC-md-ZRo">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <subviews>
-                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMc-7s-r3X">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <wkWebViewConfiguration key="configuration">
-                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                            <wkPreferences key="preferences"/>
-                                        </wkWebViewConfiguration>
-                                    </wkWebView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="gMc-7s-r3X" secondAttribute="trailing" id="V7B-wi-Is4"/>
-                                    <constraint firstItem="gMc-7s-r3X" firstAttribute="top" secondItem="qkC-md-ZRo" secondAttribute="top" id="i0a-F2-Hv6"/>
-                                    <constraint firstAttribute="bottom" secondItem="gMc-7s-r3X" secondAttribute="bottom" id="v3L-Bh-CDZ"/>
-                                    <constraint firstItem="gMc-7s-r3X" firstAttribute="leading" secondItem="qkC-md-ZRo" secondAttribute="leading" id="w9I-IZ-UVc"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -46,9 +30,6 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qkC-md-ZRo" secondAttribute="trailing" id="Lif-FX-3Od"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="webview" destination="gMc-7s-r3X" id="EnW-HB-Fzs"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

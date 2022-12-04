@@ -10,7 +10,54 @@ import WebKit
 
 class DeepConverseHostViewController: UIViewController {
     
-    @IBOutlet weak var webview: WKWebView!
+    private var webview: WKWebView!
+    private var webConfig:WKWebViewConfiguration {
+        var callbacks = [String]()
+        callbacks.append("closeTapped")
+        callbacks.append("minimizeTapped")
+        
+        let newConfiguration = WKWebViewConfiguration()
+        
+        let wkPreferences = WKPreferences()
+        wkPreferences.javaScriptEnabled = true
+        newConfiguration.preferences = wkPreferences
+        
+        let userContentController = WKUserContentController()
+        for callback in callbacks {
+            userContentController.add(self, name: callback)
+        }
+        
+        let closeButtonJS:String = closeButtonJS()
+        let closeButtonUserScript:WKUserScript =  WKUserScript(
+            source: closeButtonJS,
+            injectionTime:WKUserScriptInjectionTime.atDocumentEnd,
+            forMainFrameOnly: false
+        )
+        
+        let minimizeButtonJS: String = minimizeButtonJS()
+        let minimizeButtonUserScript: WKUserScript =  WKUserScript(
+            source: minimizeButtonJS,
+            injectionTime:WKUserScriptInjectionTime.atDocumentEnd,
+            forMainFrameOnly: false
+        )
+        
+        userContentController.addUserScript(closeButtonUserScript)
+        userContentController.addUserScript(minimizeButtonUserScript)
+        
+        newConfiguration.userContentController = userContentController
+        return newConfiguration
+    }
+    
+    private func minimizeButtonJS() -> String {
+        let script:String = "document.getElementById('your button id here').addEventListener('click', function () {window.webkit.messageHandlers.minimizeTapped.postMessage();});"
+        return script;
+    }
+    
+    private func closeButtonJS() ->String{
+        let script:String = "document.getElementById('your button id here').addEventListener('click', function () {window.webkit.messageHandlers.closeTapped.postMessage();});"
+        return script;
+    }
+    
     private var url: URL!
     private var timeout: Double!
     private var delegate: DeepConverseDelegate!
@@ -41,7 +88,7 @@ class DeepConverseHostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(DeepConverseHostViewController.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        configureWebview(callbacks: [""])
+        configureWebview()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -49,31 +96,21 @@ class DeepConverseHostViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     
-    private func configureWebview(callbacks: [String]) {
-        let wkPreferences = WKPreferences()
-        wkPreferences.javaScriptCanOpenWindowsAutomatically = true
-        wkPreferences.javaScriptEnabled = true
-        let configuration = WKWebViewConfiguration()
-        let userContentController = WKUserContentController()
-        configuration.userContentController = userContentController
-        configuration.mediaTypesRequiringUserActionForPlayback = []
-        configuration.preferences = wkPreferences
-        self.webview.scrollView.isScrollEnabled = false
+    private func configureWebview() {
         
+        self.webview = WKWebView(frame: self.view.frame, configuration: webConfig)
+        self.view.addSubview(self.webview)
+        
+        self.webview.scrollView.isScrollEnabled = false
         let webRequest = URLRequest(url: url,
                                     cachePolicy: .useProtocolCachePolicy,
                                     timeoutInterval: timeout)
         self.webview.load(webRequest)
         
-        for callback in callbacks {
-            userContentController.add(self, name: callback)
-        }
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + timeout) {
             if (self.webview.isLoading) {
                 self.webview.stopLoading()
-                self.delegate.didWebViewFail(withError: DeepConverseWebHostError.WebViewTimeout
-                )
+                self.delegate.didWebViewFail(withError: DeepConverseWebHostError.WebViewTimeout)
             }
         }
     }
@@ -84,7 +121,15 @@ extension DeepConverseHostViewController : WKScriptMessageHandler {
         _ userContentController: WKUserContentController,
         didReceive message: WKScriptMessage
     ) {
-        
+        let map = [String: String]()
+        if (message.name == "closeTapped") {
+            print("close tapped")
+        } else if (message.name == "minimizeTapped") {
+            print("minimize tapped")
+        } else {
+            print("other event")
+        }
+        delegate.didReceiveEvent(event: map)
     }
 }
 

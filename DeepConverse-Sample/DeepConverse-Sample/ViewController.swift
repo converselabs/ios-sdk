@@ -16,12 +16,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         var metadata = [String:String]()
+        metadata["hostname"] = "dcshow1-showbot.deepconverse.com "
         metadata["draft"] = "true"
         
         let session = DeepConverseSDKSession.init(
-            subDomain: "dcshow1-showbot.deepconverse.com",
-            botName: "chatbot",
-            metadata: metadata
+            subDomain: "cdn.converseapps.com/v1/assets/widget",
+            botName: "embedded-chatbot",
+            metadata: metadata,
+            webViewTimeout: 60.0
         )
         sdk = DeepConverseSDK(delegate: self, session: session)
     }

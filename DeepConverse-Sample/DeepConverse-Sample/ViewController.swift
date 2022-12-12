@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
         let session = DeepConverseSDKSession.init(
             subDomain: "dcshow1",
-            botName: "showbot",
+            botName: "supermug",
             metadata: metadata,
             webViewTimeout: 60.0
         )

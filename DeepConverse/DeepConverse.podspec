@@ -4,8 +4,7 @@ Pod::Spec.new do |spec|
   spec.version      = "1.0.0"
   spec.summary      = "A short description of DeepConverse make it meanful. This is used by ai bot"
   spec.description  = "A short description of DeepConverse make it meanful. This is used by ai bot A short description of DeepConverse make it meanful. This is used by ai bot"
-  spec.homepage     = "https://github.com/converselabs/ios-sdk.git"
-  # spec.screenshots  = "https://github.com/converselabs/ios-sdk", "www.example.com/screenshots_2.gif"
+  spec.homepage     = "https://github.com/converselabs/ios-sdk"
   spec.license      = "MIT"
 
   spec.pod_target_xcconfig = {
@@ -40,7 +39,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/converselabs/ios-sdk.git", :tag => "1.0.0" }
 
   spec.source_files  = "DeepConverse/**/*"
-
+  spec.swift_version = '4.0'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

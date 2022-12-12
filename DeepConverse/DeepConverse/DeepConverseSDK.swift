@@ -88,13 +88,17 @@ public class DeepConverseSDK {
         context: [String: String]
     ) -> URL? {
         
-        let urlString: String = "https://" + subdomain + "/" + botName
+        let urlString: String = "https://cdn.converseapps.com/v1/assets/widget/embedded-chatbot"
         
         guard let urlCompenent = NSURLComponents(string: urlString) else {
             return nil
         }
         
         var queryItems = [URLQueryItem]()
+
+        let config = subdomain + "-" + botName + ".deepconverse.com"
+        let hostnameQI = URLQueryItem.init(name: "hostname", value: config)
+        queryItems.append(hostnameQI)
         
         for item in context {
             let queryItem = URLQueryItem.init(name: item.key, value: item.value)

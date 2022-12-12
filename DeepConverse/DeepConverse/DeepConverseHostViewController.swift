@@ -13,8 +13,7 @@ class DeepConverseHostViewController: UIViewController {
     private var webview: WKWebView!
     private var webConfig:WKWebViewConfiguration {
         var callbacks = [String]()
-        callbacks.append("closeTapped")
-        callbacks.append("minimizeTapped")
+        callbacks.append("actionTapped")
         
         let newConfiguration = WKWebViewConfiguration()
         
@@ -27,35 +26,22 @@ class DeepConverseHostViewController: UIViewController {
             userContentController.add(self, name: callback)
         }
         
-        let closeButtonJS:String = closeButtonJS()
-        let closeButtonUserScript:WKUserScript =  WKUserScript(
-            source: closeButtonJS,
-            injectionTime:WKUserScriptInjectionTime.atDocumentEnd,
-            forMainFrameOnly: false
-        )
-        
-        let minimizeButtonJS: String = minimizeButtonJS()
+        let minimizeButtonJS: String = actionButtonJs()
         let minimizeButtonUserScript: WKUserScript =  WKUserScript(
             source: minimizeButtonJS,
             injectionTime:WKUserScriptInjectionTime.atDocumentEnd,
             forMainFrameOnly: false
         )
         
-        userContentController.addUserScript(closeButtonUserScript)
         userContentController.addUserScript(minimizeButtonUserScript)
         
         newConfiguration.userContentController = userContentController
         return newConfiguration
     }
     
-    private func minimizeButtonJS() -> String {
-        let script:String = "document.getElementById('your button id here').addEventListener('click', function () {window.webkit.messageHandlers.minimizeTapped.postMessage();});"
-        return script;
-    }
-    
-    private func closeButtonJS() ->String{
-        let script:String = "document.getElementById('your button id here').addEventListener('click', function () {window.webkit.messageHandlers.closeTapped.postMessage();});"
-        return script;
+    private func actionButtonJs() -> String {
+        let s = "document.addEventListener('dc.bot', function(e) { let payload = { action: e.detail.action, localStorage: { ...localStorage } } window.webkit.messageHandlers.actionTapped.postMessage(payload); });"
+        return s;
     }
     
     private var url: URL!
@@ -132,6 +118,8 @@ extension DeepConverseHostViewController : WKScriptMessageHandler {
         delegate.didReceiveEvent(event: map)
     }
 }
+
+
 
 extension DeepConverseHostViewController {
     @objc func keyboardWillHide(notification: NSNotification) {

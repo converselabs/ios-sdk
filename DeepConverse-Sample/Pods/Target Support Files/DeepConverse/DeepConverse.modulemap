@@ -1,6 +1,0 @@
-framework module DeepConverse {
-  umbrella header "DeepConverse-umbrella.h"
-
-  export *
-  module * { export * }
-}

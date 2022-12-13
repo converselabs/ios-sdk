@@ -10,21 +10,22 @@ import WebKit
 
 class DeepConverseHostViewController: UIViewController {
     
+    private static let ACTION_TAPPED = "actionTapped"
+    
+    private enum ActionType: String {
+        case open = "open"
+        case minimize = "minimize"
+    }
+    
     private var webview: WKWebView!
     private var url: URL!
     private var timeout: Double!
     private var delegate: DeepConverseDelegate!
     
-    struct ChatbotActions: Codable {
-        var action : String
-    }
-    
     static func createWebController(with url: URL,
                                     timeout: Double,
                                     delegate: DeepConverseDelegate) -> DeepConverseHostViewController {
         let bundle = Bundle(for: DeepConverseHostViewController.self)
-        
-        print("Webview URL:", url)
         
         var storyboard:UIStoryboard
         
@@ -74,11 +75,11 @@ class DeepConverseHostViewController: UIViewController {
         contentController.removeAllUserScripts()
         contentController.addUserScript(userScript)
         contentController.add(
-                    self,
-                    name: "actionTapped"
-                )
+            self,
+            name: DeepConverseHostViewController.ACTION_TAPPED
+        )
         webConfiguration.userContentController = contentController
-
+        
         self.webview = WKWebView(frame: self.view.frame, configuration: webConfiguration)
         self.view.addSubview(self.webview)
         
@@ -102,31 +103,18 @@ extension DeepConverseHostViewController : WKScriptMessageHandler {
         _ userContentController: WKUserContentController,
         didReceive message: WKScriptMessage
     ) {
-        do {
-            print("message:", message.body);
-            guard let payload = message.body as? [String: String] else { return }
-            print("struct:", payload["action"])
-            
-            switch (payload["action"]) {
-            case "open":
-                print("open action");
+        guard let payload = message.body as? [String: String] else { return }
+        switch (payload["action"]) {
+            case ActionType.open.rawValue:
                 break;
-            case "minimize":
-                print("minimize action")
+            case ActionType.minimize.rawValue:
                 self.dismiss(animated: true, completion: nil);
                 break;
-            default:
-                print("unknown action")
-            }
-            
-            delegate.didReceiveEvent(event: payload)
-        } catch {
-            print("DeepConverse event error")
+            default: break
         }
+        delegate.didReceiveEvent(event: payload)
     }
 }
-
-
 
 extension DeepConverseHostViewController {
     @objc func keyboardWillHide(notification: NSNotification) {

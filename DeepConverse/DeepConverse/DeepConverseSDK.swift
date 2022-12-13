@@ -26,30 +26,25 @@ public class DeepConverseSDKSession {
     var subDomain: String?
     var botName: String?
     var metadata: [String: String]?
-    var openWebLinkInSafari: Bool
     var webViewTimeout: Double
-    var navigationBarOpeque: Bool
     
     public init (
         subDomain: String,
         botName: String,
         metadata: [String: String],
-        shouldOpenWebLinkInSafari: Bool = false,
-        webViewTimeout: Double = 30.0,
-        isNavigationBarOpeque: Bool = false
+        webViewTimeout: Double = 30.0
     ) {
         self.subDomain = subDomain
         self.botName = botName
         self.metadata = metadata
-        self.openWebLinkInSafari = shouldOpenWebLinkInSafari
         self.webViewTimeout = webViewTimeout
-        self.navigationBarOpeque = isNavigationBarOpeque
     }
 }
 
 
 public class DeepConverseSDK {
     
+    private static let BASE_URL = "https://cdn.converseapps.com/v1/assets/widget/embedded-chatbot"
     private var delegate: DeepConverseDelegate
     private var botUrl: URL?
     private var timeout: Double
@@ -88,9 +83,7 @@ public class DeepConverseSDK {
         context: [String: String]
     ) -> URL? {
         
-        let urlString: String = "https://cdn.converseapps.com/v1/assets/widget/embedded-chatbot"
-        
-        guard let urlCompenent = NSURLComponents(string: urlString) else {
+        guard let urlCompenent = NSURLComponents(string: DeepConverseSDK.BASE_URL) else {
             return nil
         }
         

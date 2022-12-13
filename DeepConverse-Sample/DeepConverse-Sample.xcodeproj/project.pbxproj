@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3793771B80B55C59FC7A54FB /* Pods_DeepConverse_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32E050C6A9E7A729DDFA0D7 /* Pods_DeepConverse_Sample.framework */; };
-		7AB6F9FE0E476B9AFEAF3D5C /* Pods_DeepConverse_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE9B360245CE0CF4F8D035B /* Pods_DeepConverse_SampleTests.framework */; };
-		C5F67A01DCE318099392AAAE /* Pods_DeepConverse_Sample_DeepConverse_SampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE07D346B9EA616BB8E4F0F1 /* Pods_DeepConverse_Sample_DeepConverse_SampleUITests.framework */; };
 		DEF599A628DAC340004EE670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF599A528DAC340004EE670 /* AppDelegate.swift */; };
 		DEF599A828DAC340004EE670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF599A728DAC340004EE670 /* SceneDelegate.swift */; };
 		DEF599AA28DAC340004EE670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF599A928DAC340004EE670 /* ViewController.swift */; };
@@ -39,14 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36B89197AF3B663FA1FF7963 /* Pods-DeepConverse-Sample-DeepConverse-SampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepConverse-Sample-DeepConverse-SampleUITests.release.xcconfig"; path = "Target Support Files/Pods-DeepConverse-Sample-DeepConverse-SampleUITests/Pods-DeepConverse-Sample-DeepConverse-SampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3811083634EE0DDB2DF0709E /* Pods-DeepConverse-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepConverse-Sample.release.xcconfig"; path = "Target Support Files/Pods-DeepConverse-Sample/Pods-DeepConverse-Sample.release.xcconfig"; sourceTree = "<group>"; };
-		6EE9B360245CE0CF4F8D035B /* Pods_DeepConverse_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepConverse_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		79FD9D76B1068B031EE089C9 /* Pods-DeepConverse-Sample-DeepConverse-SampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepConverse-Sample-DeepConverse-SampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-DeepConverse-Sample-DeepConverse-SampleUITests/Pods-DeepConverse-Sample-DeepConverse-SampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7A654B396D3D2D6FA5BC9217 /* Pods-DeepConverse-SampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepConverse-SampleTests.release.xcconfig"; path = "Target Support Files/Pods-DeepConverse-SampleTests/Pods-DeepConverse-SampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		B32E050C6A9E7A729DDFA0D7 /* Pods_DeepConverse_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepConverse_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD11B00F5945E2CD8DFFAA4 /* Pods-DeepConverse-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepConverse-Sample.debug.xcconfig"; path = "Target Support Files/Pods-DeepConverse-Sample/Pods-DeepConverse-Sample.debug.xcconfig"; sourceTree = "<group>"; };
-		DAAF507E40C1C088D168167F /* Pods-DeepConverse-SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepConverse-SampleTests.debug.xcconfig"; path = "Target Support Files/Pods-DeepConverse-SampleTests/Pods-DeepConverse-SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DEF599A228DAC340004EE670 /* DeepConverse-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DeepConverse-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF599A528DAC340004EE670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF599A728DAC340004EE670 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +53,6 @@
 		DEF599C228DAC341004EE670 /* DeepConverse-SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DeepConverse-SampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF599C628DAC341004EE670 /* DeepConverse_SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepConverse_SampleUITests.swift; sourceTree = "<group>"; };
 		DEF599C828DAC341004EE670 /* DeepConverse_SampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepConverse_SampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EE07D346B9EA616BB8E4F0F1 /* Pods_DeepConverse_Sample_DeepConverse_SampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepConverse_Sample_DeepConverse_SampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AB6F9FE0E476B9AFEAF3D5C /* Pods_DeepConverse_SampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5F67A01DCE318099392AAAE /* Pods_DeepConverse_Sample_DeepConverse_SampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,10 +86,6 @@
 			children = (
 				CBD11B00F5945E2CD8DFFAA4 /* Pods-DeepConverse-Sample.debug.xcconfig */,
 				3811083634EE0DDB2DF0709E /* Pods-DeepConverse-Sample.release.xcconfig */,
-				79FD9D76B1068B031EE089C9 /* Pods-DeepConverse-Sample-DeepConverse-SampleUITests.debug.xcconfig */,
-				36B89197AF3B663FA1FF7963 /* Pods-DeepConverse-Sample-DeepConverse-SampleUITests.release.xcconfig */,
-				DAAF507E40C1C088D168167F /* Pods-DeepConverse-SampleTests.debug.xcconfig */,
-				7A654B396D3D2D6FA5BC9217 /* Pods-DeepConverse-SampleTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -109,8 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				B32E050C6A9E7A729DDFA0D7 /* Pods_DeepConverse_Sample.framework */,
-				EE07D346B9EA616BB8E4F0F1 /* Pods_DeepConverse_Sample_DeepConverse_SampleUITests.framework */,
-				6EE9B360245CE0CF4F8D035B /* Pods_DeepConverse_SampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,7 +178,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEF599CF28DAC341004EE670 /* Build configuration list for PBXNativeTarget "DeepConverse-SampleTests" */;
 			buildPhases = (
-				C077FBDB93358D31CA99EB5A /* [CP] Check Pods Manifest.lock */,
 				DEF599B428DAC341004EE670 /* Sources */,
 				DEF599B528DAC341004EE670 /* Frameworks */,
 				DEF599B628DAC341004EE670 /* Resources */,
@@ -213,11 +196,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEF599D228DAC341004EE670 /* Build configuration list for PBXNativeTarget "DeepConverse-SampleUITests" */;
 			buildPhases = (
-				6B904B66816D78C7C233E123 /* [CP] Check Pods Manifest.lock */,
 				DEF599BE28DAC341004EE670 /* Sources */,
 				DEF599BF28DAC341004EE670 /* Frameworks */,
 				DEF599C028DAC341004EE670 /* Resources */,
-				8B01D9A895A015EE3A9A3A0C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -300,28 +281,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6B904B66816D78C7C233E123 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DeepConverse-Sample-DeepConverse-SampleUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		71E4EB27D9E187541D0E12A7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,45 +296,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeepConverse-Sample/Pods-DeepConverse-Sample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8B01D9A895A015EE3A9A3A0C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DeepConverse-Sample-DeepConverse-SampleUITests/Pods-DeepConverse-Sample-DeepConverse-SampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DeepConverse-Sample-DeepConverse-SampleUITests/Pods-DeepConverse-Sample-DeepConverse-SampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeepConverse-Sample-DeepConverse-SampleUITests/Pods-DeepConverse-Sample-DeepConverse-SampleUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C077FBDB93358D31CA99EB5A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DeepConverse-SampleTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EA31E43AFD0B187FBDB47EE1 /* [CP] Check Pods Manifest.lock */ = {
@@ -637,7 +557,6 @@
 		};
 		DEF599D028DAC341004EE670 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAAF507E40C1C088D168167F /* Pods-DeepConverse-SampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -657,7 +576,6 @@
 		};
 		DEF599D128DAC341004EE670 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A654B396D3D2D6FA5BC9217 /* Pods-DeepConverse-SampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -677,7 +595,6 @@
 		};
 		DEF599D328DAC341004EE670 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79FD9D76B1068B031EE089C9 /* Pods-DeepConverse-Sample-DeepConverse-SampleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -695,7 +612,6 @@
 		};
 		DEF599D428DAC341004EE670 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36B89197AF3B663FA1FF7963 /* Pods-DeepConverse-Sample-DeepConverse-SampleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

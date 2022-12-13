@@ -11,47 +11,20 @@ import WebKit
 class DeepConverseHostViewController: UIViewController {
     
     private var webview: WKWebView!
-    private var webConfig:WKWebViewConfiguration {
-        var callbacks = [String]()
-        callbacks.append("actionTapped")
-        
-        let newConfiguration = WKWebViewConfiguration()
-        
-        let wkPreferences = WKPreferences()
-        wkPreferences.javaScriptEnabled = true
-        newConfiguration.preferences = wkPreferences
-        
-        let userContentController = WKUserContentController()
-        for callback in callbacks {
-            userContentController.add(self, name: callback)
-        }
-        
-        let minimizeButtonJS: String = actionButtonJs()
-        let minimizeButtonUserScript: WKUserScript =  WKUserScript(
-            source: minimizeButtonJS,
-            injectionTime:WKUserScriptInjectionTime.atDocumentEnd,
-            forMainFrameOnly: false
-        )
-        
-        userContentController.addUserScript(minimizeButtonUserScript)
-        
-        newConfiguration.userContentController = userContentController
-        return newConfiguration
-    }
-    
-    private func actionButtonJs() -> String {
-        let s = "document.addEventListener('dc.bot', function(e) { let payload = { action: e.detail.action, localStorage: { ...localStorage } } window.webkit.messageHandlers.actionTapped.postMessage(payload); });"
-        return s;
-    }
-    
     private var url: URL!
     private var timeout: Double!
     private var delegate: DeepConverseDelegate!
+    
+    struct ChatbotActions: Codable {
+        var action : String
+    }
     
     static func createWebController(with url: URL,
                                     timeout: Double,
                                     delegate: DeepConverseDelegate) -> DeepConverseHostViewController {
         let bundle = Bundle(for: DeepConverseHostViewController.self)
+        
+        print("Webview URL:", url)
         
         var storyboard:UIStoryboard
         
@@ -73,7 +46,7 @@ class DeepConverseHostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(DeepConverseHostViewController.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(DeepConverseHostViewController.keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
         configureWebview()
     }
     
@@ -82,9 +55,31 @@ class DeepConverseHostViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     
+    private func actionButtonJs() -> String {
+        let s = """
+        document.addEventListener('dc.bot', function(e) {
+          let payload = { action: e.detail.action };
+          window.webkit.messageHandlers.actionTapped.postMessage(payload);
+        });
+        """
+        return s;
+    }
+    
     private func configureWebview() {
         
-        self.webview = WKWebView(frame: self.view.frame, configuration: webConfig)
+        let webConfiguration = WKWebViewConfiguration()
+        let contentController = WKUserContentController()
+        let js: String = actionButtonJs();
+        let userScript = WKUserScript(source: js, injectionTime: WKUserScriptInjectionTime.atDocumentEnd, forMainFrameOnly: false)
+        contentController.removeAllUserScripts()
+        contentController.addUserScript(userScript)
+        contentController.add(
+                    self,
+                    name: "actionTapped"
+                )
+        webConfiguration.userContentController = contentController
+
+        self.webview = WKWebView(frame: self.view.frame, configuration: webConfiguration)
         self.view.addSubview(self.webview)
         
         self.webview.scrollView.isScrollEnabled = false
@@ -107,15 +102,27 @@ extension DeepConverseHostViewController : WKScriptMessageHandler {
         _ userContentController: WKUserContentController,
         didReceive message: WKScriptMessage
     ) {
-        let map = [String: String]()
-        if (message.name == "closeTapped") {
-            print("close tapped")
-        } else if (message.name == "minimizeTapped") {
-            print("minimize tapped")
-        } else {
-            print("other event")
+        do {
+            print("message:", message.body);
+            guard let payload = message.body as? [String: String] else { return }
+            print("struct:", payload["action"])
+            
+            switch (payload["action"]) {
+            case "open":
+                print("open action");
+                break;
+            case "minimize":
+                print("minimize action")
+                self.dismiss(animated: true, completion: nil);
+                break;
+            default:
+                print("unknown action")
+            }
+            
+            delegate.didReceiveEvent(event: payload)
+        } catch {
+            print("DeepConverse event error")
         }
-        delegate.didReceiveEvent(event: map)
     }
 }
 

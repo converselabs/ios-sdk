@@ -86,6 +86,18 @@ class DeepConverseHostViewController: UIViewController {
         let webRequest = URLRequest(url: url,
                                     cachePolicy: .useProtocolCachePolicy,
                                     timeoutInterval: timeout)
+        
+        let layoutGuide = self.view.safeAreaLayoutGuide
+        self.webview.translatesAutoresizingMaskIntoConstraints = false
+        self.webview.leadingAnchor.constraint(
+              equalTo: layoutGuide.leadingAnchor).isActive = true
+        self.webview.trailingAnchor.constraint(
+              equalTo: layoutGuide.trailingAnchor).isActive = true
+        self.webview.topAnchor.constraint(
+              equalTo: layoutGuide.topAnchor).isActive = true
+        self.webview.bottomAnchor.constraint(
+              equalTo: layoutGuide.bottomAnchor).isActive = true
+        
         self.webview.load(webRequest)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + timeout) {

@@ -14,17 +14,20 @@ class DeepConverseHostViewController: UIViewController {
     private var url: URL!
     private var timeout: Double!
     private var delegate: DeepConverseDelegate!
+    private var session: DeepConverseSDKSession!
     
     struct ChatbotActions: Codable {
         var action : String
     }
     
     static func createWebController(with url: URL,
+                                    session: DeepConverseSDKSession,
                                     timeout: Double,
                                     delegate: DeepConverseDelegate) -> DeepConverseHostViewController {
         let bundle = Bundle(for: DeepConverseHostViewController.self)
         
-        print("Webview URL:", url)
+        print("[DeepConverseSDK] Webview URL:", url)
+        print("[DeepConverseSDK] Metadata: ", session.metadata)
         
         var storyboard:UIStoryboard
         
@@ -40,7 +43,7 @@ class DeepConverseHostViewController: UIViewController {
         viewController.url = url
         viewController.timeout = timeout
         viewController.delegate = delegate
-        
+        viewController.session = session
         return viewController
     }
     
@@ -55,8 +58,33 @@ class DeepConverseHostViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     
+    private func json(from object:Any) -> String? {
+        guard let data = try? JSONSerialization.data(withJSONObject: object, options: []) else {
+            return nil
+        }
+        return String(data: data, encoding: String.Encoding.utf8)
+    }
+    
     private func actionButtonJs() -> String {
+        do {
+            var metadataJSON = json(from: self.session.metadata)
+            print("[DeepConverseSDK] Metadata:", metadataJSON)
+            let s = """
+        setTimeout(function () {var evt = new CustomEvent('botWidgetInit', { detail: \(metadataJSON!) });document.dispatchEvent(evt);}, 100)
+        
+        document.addEventListener('dc.bot', function(e) {
+          let payload = { action: e.detail.action };
+          window.webkit.messageHandlers.actionTapped.postMessage(payload);
+        });
+        """
+            return s;
+        } catch {
+            print("[DeepConverseSDK] Error in Metadata" + error.localizedDescription);
+        }
+        
         let s = """
+        setTimeout(function () {var evt = new CustomEvent('botWidgetInit', { detail: {} });document.dispatchEvent(evt);}, 100)
+        
         document.addEventListener('dc.bot', function(e) {
           let payload = { action: e.detail.action };
           window.webkit.messageHandlers.actionTapped.postMessage(payload);
@@ -115,25 +143,25 @@ extension DeepConverseHostViewController : WKScriptMessageHandler {
         didReceive message: WKScriptMessage
     ) {
         do {
-            print("message:", message.body);
+            print("[DeepConverseSDK] message:", message.body);
             guard let payload = message.body as? [String: String] else { return }
             print("struct:", payload["action"])
             
             switch (payload["action"]) {
             case "open":
-                print("open action");
+                print("[DeepConverseSDK] open action");
                 break;
             case "minimize":
-                print("minimize action")
+                print("[DeepConverseSDK] minimize action")
                 self.dismiss(animated: true, completion: nil);
                 break;
             default:
-                print("unknown action")
+                print("[DeepConverseSDK] unknown action")
             }
             
             delegate.didReceiveEvent(event: payload)
         } catch {
-            print("DeepConverse event error")
+            print("[DeepConverseSDK] Event error")
         }
     }
 }

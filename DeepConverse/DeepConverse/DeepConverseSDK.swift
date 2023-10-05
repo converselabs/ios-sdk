@@ -1,8 +1,6 @@
 //
-//  BotManager.swift
 //  DeepConverse
 //
-//  Created by Ankit Angra on 2022-09-21.
 //
 
 import Foundation
@@ -53,10 +51,12 @@ public class DeepConverseSDK {
     private var delegate: DeepConverseDelegate
     private var botUrl: URL?
     private var timeout: Double
+    private var session: DeepConverseSDKSession
     
     public init(delegate: DeepConverseDelegate, session: DeepConverseSDKSession) {
         self.delegate = delegate
         self.timeout = session.webViewTimeout
+        self.session = session
         createSession(session: session)
     }
     
@@ -73,8 +73,7 @@ public class DeepConverseSDK {
         
         guard let url = createUrl (
             subdomain: subDomain,
-            botName: botName,
-            context: context
+            botName: botName
         ) else {
             return
         }
@@ -84,11 +83,10 @@ public class DeepConverseSDK {
     
     private func createUrl(
         subdomain: String,
-        botName: String,
-        context: [String: String]
+        botName: String
     ) -> URL? {
         
-        let urlString: String = "https://cdn.converseapps.com/v1/assets/widget/embedded-chatbot"
+        let urlString: String = "https://cdn.deepconverse.com/v1/assets/widget/embedded-chatbot"
         
         guard let urlCompenent = NSURLComponents(string: urlString) else {
             return nil
@@ -99,11 +97,6 @@ public class DeepConverseSDK {
         let config = subdomain + "-" + botName + ".deepconverse.com"
         let hostnameQI = URLQueryItem.init(name: "hostname", value: config)
         queryItems.append(hostnameQI)
-        
-        for item in context {
-            let queryItem = URLQueryItem.init(name: item.key, value: item.value)
-            queryItems.append(queryItem)
-        }
         
         urlCompenent.queryItems = queryItems
         
@@ -117,6 +110,7 @@ public class DeepConverseSDK {
         }
         
         let vc = DeepConverseHostViewController.createWebController(with: url,
+                                                                    session: session,
                                                                     timeout: timeout,
                                                                     delegate: delegate)
         viewController.present(vc, animated: true) {
@@ -124,8 +118,3 @@ public class DeepConverseSDK {
         }
     }
 }
-
-
-
-
-

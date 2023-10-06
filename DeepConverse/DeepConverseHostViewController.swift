@@ -107,6 +107,7 @@ class DeepConverseHostViewController: UIViewController {
         webConfiguration.userContentController = contentController
 
         self.webview = WKWebView(frame: self.view.frame, configuration: webConfiguration)
+        self.webview.navigationDelegate = self
         self.view.addSubview(self.webview)
 
         self.webview.scrollView.isScrollEnabled = false
@@ -179,4 +180,25 @@ extension DeepConverseHostViewController {
             }
         }
     }
+}
+
+extension DeepConverseHostViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        print(navigationAction)
+        guard case .linkActivated = navigationAction.navigationType,
+              let url = navigationAction.request.url
+        else {
+            decisionHandler(.allow)
+            return
+        }
+        
+        print("[DeepConverseSDK] Link clicked: ", url)
+        
+        decisionHandler(.cancel)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+   }
 }
